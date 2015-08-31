@@ -1,0 +1,523 @@
+##########################################################################
+#
+# DESCRIPTION: This is the script parameter file for the Swift script.
+#
+# HISTORY: $Log: sw0.par,v $
+# HISTORY: Revision 1.214  2013/09/20 07:48:50  apsop
+# HISTORY: caldb20130405clock096
+# HISTORY:
+# HISTORY: Revision 1.213  2013/08/22 20:23:31  apsop
+# HISTORY: 3.16.01 for production.
+# HISTORY: Removed the heasarc.gsfc.nasa.gov versions of
+# HISTORY: JDCatCoords, JDCatTrigs.
+# HISTORY:
+# HISTORY: Revision 1.212  2013/08/19 21:04:03  apsop
+# HISTORY: Changed URLs of JD's catalog from swift-v to permanent host name swift.
+# HISTORY:
+# HISTORY: Revision 1.211  2013/07/16 06:54:20  apsop
+# HISTORY: Commit the changes listed below.  Also, added
+# HISTORY: new parameters JDCatCoords and JDCatTrigs.
+# HISTORY:
+# HISTORY: JRG as apsop 2013-07-02 on sdcdev:
+# HISTORY: Version to 3.16.00, since we're now using heasoft-6.13
+# HISTORY: (change to .01 for production).
+# HISTORY: caldb20130405clock094
+# HISTORY:
+# HISTORY: JRG as apsop 2013-05-16 on sdcdev: Version 3.15.07,
+# HISTORY: heasoft-6.13, caldb20130405
+# HISTORY:
+# HISTORY: Revision 1.210  2013/04/11 07:59:14  apsop
+# HISTORY: caldb20110812clock092
+# HISTORY:
+# HISTORY: Revision 1.209  2013/03/28 09:59:51  apsop
+# HISTORY: heasoft-6.11p16 and caldb20110812clock091
+# HISTORY:
+# HISTORY: JRG as apsop 2013-03-21 on sdc: caldb20110812clock091
+# HISTORY: (includes swusenscorr v003)
+# HISTORY:
+# HISTORY: Revision 1.208  2013/01/30 05:11:35  apsop
+# HISTORY: Commit of clock088 and clock090
+# HISTORY:
+# HISTORY:
+# HISTORY: JRG as apsop 2012-12-20 on sdc: caldb20110812clock090.
+# HISTORY:
+# HISTORY: JRG as apsop 2012-11-29 on sdc: caldb20110812clock088.
+# HISTORY:
+# HISTORY: Revision 1.207  2012/10/18 21:58:45  apsop
+# HISTORY: caldb20110812clock087
+# HISTORY:
+# HISTORY: JRG as apsop 2012-09-14 on sdc: caldb20110812clock087.
+# HISTORY:
+# HISTORY: Revision 1.206  2012/08/30 08:40:17  apsop
+# HISTORY: Version 3.15.06.  New parameter GrbCat gives path to
+# HISTORY: Lorella's/Davide's GRB catalog.
+# HISTORY:
+# HISTORY: Revision 1.205  2012/07/12 05:13:22  apsop
+# HISTORY: Commit of version 3.15.05 with clock085 and leapsec_010712.fits.
+# HISTORY:
+# HISTORY: JRG as apsop 2012-06-28 on sdc: 3.15.05; leapsec_010712.fits file.
+# HISTORY:
+# HISTORY: JRG as apsop 2012-06-14 on sdcdev: caldb20110812clock085.
+# HISTORY:
+# HISTORY: JRG as apsop 2012-04-19 on sdc: Updated to caldb20110812clock083.
+# HISTORY:
+# HISTORY: Revision 1.203  2012/02/15 01:45:31  apsop
+# HISTORY: 3.15.04
+# HISTORY:
+# HISTORY: Revision 1.202  2012/02/07 22:01:49  apsop
+# HISTORY: Updated to caldb20110812clock081.
+# HISTORY:
+# HISTORY: Revision 1.201  2012/01/21 00:55:08  apsop
+# HISTORY: Changed starcatalog from .b26_ssdc,.alt_ssdc to .b26_ssdc,.b18_ssdc to match
+# HISTORY: the proc3.14.1 production (sdc) version.
+# HISTORY:
+# HISTORY: Revision 1.200  2012/01/12 07:23:48  apsop
+# HISTORY: 3.15.03; HEASoft-6.11; caldb20110812
+# HISTORY:
+# HISTORY: JRG as apsop 2012-01-11 on sdcdev: BAT repository, changed
+# HISTORY:    testshare to procshare for compatibility with install scripts
+# HISTORY:    (which are backward IMHO).  Be sure to use testshare for
+# HISTORY:    development & testing, change to procshare for repository;
+# HISTORY:    install_test edits procshare to testshare when installs st area.
+# HISTORY:
+# HISTORY: JRG as apsop 2012-01-04 on sdcdev: proc3.15.03 merge
+# HISTORY:
+# HISTORY: JRG as apsop 2011-12-21 on sdcdev: calddb20110812clock079
+# HISTORY:
+# HISTORY: JRG as apsop 2011-11-19 on sdcdev: Added refattopt (used by
+# HISTORY:    uvotimage, uvotexpmap, swiftxform).
+# HISTORY:
+# HISTORY: JRG as apsop 2011-10-18 on sdcdev: updated to caldb20110812clock077
+# HISTORY:
+# HISTORY: JRG (as apsop) 2011-10-14 on sdcdev:
+# HISTORY:    blanked targetsSkipFC to test Bob's uvotproduct fix
+# HISTORY:
+# HISTORY: JRG (as apsop) 2011-09-07 on sdcdev:
+# HISTORY:    updated to caldb20110812, required by HEASoft 6.11.
+# HISTORY:
+# HISTORY: JRG (as apsop) 2011-08-30 on sdcdev:
+# HISTORY:    version 3.15.02: Use HEASoft/FTOOLS v6.11.
+# HISTORY:
+# HISTORY: JRG (as apsop) 2011-08-17 on sdcdev:
+# HISTORY:    version 3.15.01
+# HISTORY:    Added targetsSkipFC, new for UvotProduct.pm.
+# HISTORY:
+# HISTORY: JRG (as apsop) 2011-08-09 on sdcdev: upd to caldb20110430clock075
+# HISTORY:    Changed watchers to me.
+# HISTORY:
+# HISTORY: JRG (as apsop) 2011-05-26 on sdcdev: updated to caldb20110430clock073
+# HISTORY:
+# HISTORY: JRG (as apsop) 2011-05-18 on sdcdev: updated caldb to 20110430
+# HISTORY:
+# HISTORY: JRG (as apsop) 2011-04-11 on sdcdev: updated caldb to 20110303
+# HISTORY:           (this change not from/in cvs/rcs)
+# HISTORY:
+# HISTORY: Revision 1.196  2011/01/20 19:39:24  apsop
+# HISTORY: Added most recent calibration files and usage of HEADAS 6.10
+# HISTORY:
+# HISTORY: Revision 1.195  2009/12/20 18:57:32  apsop
+# HISTORY: Corrected some directories to use HEASOFT 6.8, etc
+# HISTORY:
+# HISTORY: Revision 1.194  2009/12/18 14:37:19  apsop
+# HISTORY: This release contains several new items:
+# HISTORY:   1. call to Subs::UvotGraspCorr for apsect correction
+# HISTORY:   2. call to Subs::UvotProduct, which generates gifs light curves
+# HISTORY:   3. call to Subs::XrtGrbLc, which generates gifs light curves for GRB based on XRT data
+# HISTORY:
+# HISTORY: Revision 1.193  2009/07/17 15:04:58  apsop
+# HISTORY: changed tstart tstop in battblocks, removed tdrss as input files for xrtphascorr,changed log message in BATLightCurve.pm
+# HISTORY:
+# HISTORY: Revision 1.192  2009/06/05 18:47:33  apsop
+# HISTORY: increment version number, added xrtphascorr, caldb20090519, BAT lightcurve gif file
+# HISTORY:
+# HISTORY: Revision 1.191  2009/04/16 17:52:52  apsop
+# HISTORY: new caldb20090416
+# HISTORY:
+# HISTORY: Revision 1.190  2009/04/08 17:55:07  apsop
+# HISTORY: Increment version number. New uvot2fits.
+# HISTORY:
+# HISTORY: Revision 1.189  2009/04/08 17:28:49  apsop
+# HISTORY: New version of headas 6.6.2
+# HISTORY:
+# HISTORY: Revision 1.185  2008/12/10 14:13:42  apsop
+# HISTORY: New version of heasoft and swift2fits programs. New version of caldb.
+# HISTORY:
+# HISTORY: Revision 1.182  2007/12/21 11:30:02  apsop
+# HISTORY: New (patched) version of headas.
+# HISTORY:
+# HISTORY: Revision 1.181  2007/12/18 20:07:45  apsop
+# HISTORY: New version of headas (build 22).  New caldb.
+# HISTORY:
+# HISTORY: Revision 1.180  2007/11/08 17:28:39  apsop
+# HISTORY: New versions of headas software and caldb.
+# HISTORY:
+# HISTORY: Revision 1.179  2007/09/17 15:28:46  apsop
+# HISTORY: New version of bat2fits.
+# HISTORY:
+# HISTORY: Revision 1.178  2007/09/11 18:42:13  apsop
+# HISTORY: New version of heasoft tools, swift build 21.
+# HISTORY:
+# HISTORY: Revision 1.177  2007/07/17 18:09:22  apsop
+# HISTORY: New version of xrt2fits.
+# HISTORY:
+# HISTORY: Revision 1.176  2007/07/10 20:17:40  apsop
+# HISTORY: New version of uvot2fits.
+# HISTORY:
+# HISTORY: Revision 1.175  2007/06/28 21:12:20  apsop
+# HISTORY: New versions of uvot2fits and bat2fits.
+# HISTORY:
+# HISTORY: Revision 1.174  2007/04/20 18:57:31  apsop
+# HISTORY: New version of caldb.
+# HISTORY:
+# HISTORY: Revision 1.173  2007/04/01 19:05:10  apsop
+# HISTORY: New version of uvot2fits.  New hk fits conversion file.
+# HISTORY:
+# HISTORY: Revision 1.172  2007/03/15 21:51:45  apsop
+# HISTORY: New versions of headas, xrt2fits and uvot2fits.  Add second catalog spec file to starcatalog.
+# HISTORY:
+# HISTORY: Revision 1.171  2007/02/27 19:23:11  apsop
+# HISTORY: New patched version of headas tools.
+# HISTORY:
+# HISTORY: Revision 1.170  2007/02/01 16:59:12  apsop
+# HISTORY: New version of headas 20 (patched).  New caldb.  New versions of xrt2fits and uvot2fits.
+# HISTORY:
+# HISTORY: Revision 1.169  2006/09/20 20:23:42  apsop
+# HISTORY: New caldb and new uvot2fits.
+# HISTORY:
+# HISTORY: Revision 1.168  2006/09/10 20:29:20  apsop
+# HISTORY: New version of headas, uvot2fits, and xrt2fits.
+# HISTORY:
+# HISTORY: Revision 1.167  2006/08/24 13:27:39  apsop
+# HISTORY: New patched version of headas/ftools.
+# HISTORY:
+# HISTORY: Revision 1.166  2006/07/10 15:49:46  apsop
+# HISTORY: New version of uvot2fits.
+# HISTORY:
+# HISTORY: Revision 1.165  2006/07/03 01:32:52  apsop
+# HISTORY: New version of uvot2fits
+# HISTORY:
+# HISTORY: Revision 1.164  2006/06/15 22:08:54  apsop
+# HISTORY: New version of caldb.
+# HISTORY:
+# HISTORY: Revision 1.163  2006/05/06 21:22:43  apsop
+# HISTORY: New (patched) version of headas.
+# HISTORY:
+# HISTORY: Revision 1.162  2006/04/28 14:35:28  apsop
+# HISTORY: New version of caldb.
+# HISTORY:
+# HISTORY: Revision 1.161  2006/04/27 18:14:18  apsop
+# HISTORY: Swift build 18, new versions of bat2fits and uvot2fits,
+# HISTORY: new caldb and starcatalog spec file.
+# HISTORY:
+# HISTORY: Revision 1.160  2006/03/06 17:37:34  apsop
+# HISTORY: New version of bat2fits and xrt2fits.
+# HISTORY:
+# HISTORY: Revision 1.159  2006/01/31 16:34:25  apsop
+# HISTORY: New version of xrt2fits.
+# HISTORY:
+# HISTORY: Revision 1.158  2006/01/29 19:36:09  apsop
+# HISTORY: New version of xrt2fits. New leapsec table with 2006 leapsecond.
+# HISTORY:
+# HISTORY: Revision 1.157  2006/01/13 17:31:41  apsop
+# HISTORY: New version of caldb.
+# HISTORY:
+# HISTORY: Revision 1.156  2006/01/11 20:02:55  apsop
+# HISTORY: New version of uvot2fits, bat2fits, and fitspackets: UTCF fixes.
+# HISTORY:
+# HISTORY: Revision 1.155  2005/12/20 17:33:14  apsop
+# HISTORY: New version of headas, 16_2
+# HISTORY:
+# HISTORY: Revision 1.154  2005/12/19 16:04:55  apsop
+# HISTORY: New version of uvot2fits
+# HISTORY:
+# HISTORY: Revision 1.153  2005/11/20 20:42:52  apsop
+# HISTORY: Change to using usnob1 star catalog
+# HISTORY:
+# HISTORY: Revision 1.152  2005/11/16 01:13:33  apsop
+# HISTORY: New version of bat2fits
+# HISTORY:
+# HISTORY: Revision 1.151  2005/11/15 20:08:48  apsop
+# HISTORY: New bat2fits and uvot2fits.  Set starcatalog to current default value in use.
+# HISTORY:
+# HISTORY: Revision 1.150  2005/11/09 20:15:53  apsop
+# HISTORY: Add in starcatalog parameter.
+# HISTORY:
+# HISTORY: Revision 1.147  2005/11/08 16:39:17  apsop
+# HISTORY: New version of headas and tools linked against it.  New versions of swift2fits tasks.  Clean up history and unneeded cal files. New version of caldb.
+# HISTORY:
+# HISTORY: Revision 1.146  2005/10/26 17:33:12  apsop
+# HISTORY: New version of xrt2fits.
+# HISTORY:
+# HISTORY: Revision 1.145  2005/08/30 16:11:54  apsop
+# HISTORY: New version of bat2fits.
+# HISTORY:
+# HISTORY: Revision 1.144  2005/07/08 19:07:43  apsop
+# HISTORY: New version of swift2fits.  New version of caldb.
+# HISTORY:
+# HISTORY: Revision 1.143  2005/06/01 13:44:11  apsop
+# HISTORY: Remove obsolete cal file parameters.  New versions of bat2fits and uvot2fits.
+# HISTORY:
+# HISTORY: Revision 1.142  2005/05/26 12:59:16  apsop
+# HISTORY: New version of xrt2fits.
+# HISTORY:
+# HISTORY: Revision 1.141  2005/05/04 15:21:00  apsop
+# HISTORY: Use stools version compiled with large files option.
+# HISTORY:
+# HISTORY: Revision 1.140  2005/04/29 15:53:51  apsop
+# HISTORY: New version of bat2fits.
+# HISTORY:
+# HISTORY: Revision 1.139  2005/04/25 20:01:34  apsop
+# HISTORY: Update uvot_teldef param to latest version of teldef file.
+# HISTORY:
+# HISTORY: Revision 1.138  2005/04/19 16:12:22  apsop
+# HISTORY: Remove caldbver parameter. New version of caldb.
+# HISTORY:
+# HISTORY: Revision 1.137  2005/04/11 02:26:04  apsop
+# HISTORY: New version of headas, and recompiled versions of swift2fits, acs2fits and fitspackets.
+# HISTORY:
+# HISTORY: Revision 1.136  2005/04/06 15:38:45  apsop
+# HISTORY: Add in caldb parameter.
+# HISTORY:
+# HISTORY: Revision 1.135  2005/03/28 00:56:16  apsop
+# HISTORY: Versions of swift2fits recompiled statically with headas12
+# HISTORY:
+# HISTORY: Revision 1.134  2005/03/25 20:38:08  apsop
+# HISTORY: New version of headas. Recompile all dependent code with new version of cfitsio. New versions of xrt2fits and bat2fits.
+# HISTORY:
+# HISTORY: Revision 1.132  2005/03/07 20:34:00  apsop
+# HISTORY: New version of xrt2fits.
+# HISTORY:
+# HISTORY: Revision 1.131  2005/02/25 20:33:02  apsop
+# HISTORY: New versions of headas, xrt2fits and serveral xrt cal files.
+# HISTORY:
+# HISTORY: Revision 1.130  2005/02/24 17:29:10  apsop
+# HISTORY: New version of bat_pulser file.
+# HISTORY:
+# HISTORY: Revision 1.129  2005/02/20 23:17:38  apsop
+# HISTORY: New versions of tdrss2fits and uvot2fits
+# HISTORY:
+# HISTORY: Revision 1.128  2005/02/18 02:03:46  apsop
+# HISTORY: New uvot teldef file.
+# HISTORY:
+# HISTORY: Revision 1.126  2005/02/08 19:25:11  apsop
+# HISTORY: New versions of acs2fits, xrt2fits, uvot2fits and tdrss2fits.  New bat_pulse* calibration files.  New version of headas.
+# HISTORY:
+# HISTORY: Revision 1.124  2005/01/21 04:32:11  apsop
+# HISTORY: Update uvot2fits and calibration files.
+# HISTORY:
+# HISTORY: Revision 1.123  2005/01/15 15:48:04  apsop
+# HISTORY: New version of uvot2fits.
+# HISTORY:
+# HISTORY: Revision 1.118  2004/12/31 01:44:51  apsop
+# HISTORY: Update minor version number to distinguish from a version run in the test pipeline.
+# HISTORY:
+# HISTORY: Revision 1.116  2004/12/22 18:21:04  apsop
+# HISTORY: New versions of xrt2fits and bat2fits.  New version of tdrss2fits compiled in.
+# HISTORY:
+# HISTORY: Revision 1.113  2004/12/14 02:55:54  apsop
+# HISTORY: New version of fitspackets.
+# HISTORY:
+# HISTORY: Revision 1.112  2004/12/11 14:45:14  apsop
+# HISTORY: Update version of gcc being used
+# HISTORY:
+# HISTORY: Revision 1.111  2004/12/10 03:30:52  apsop
+# HISTORY: New versions of headas and all swift2fits routines.
+# HISTORY:
+# HISTORY: Revision 1.106  2004/11/29 16:36:35  apsop
+# HISTORY: New versions of xrt2fits and hk config file.
+# HISTORY:
+# HISTORY: Revision 1.105  2004/11/21 21:59:56  apsop
+# HISTORY: Update ITOS conversion database.
+# HISTORY:
+# HISTORY: Revision 1.104  2004/11/19 21:46:48  apsop
+# HISTORY: New version of xrt2fits.
+# HISTORY:
+# HISTORY: Revision 1.102  2004/11/14 17:27:28  apsop
+# HISTORY: New version of bat2fits.
+# HISTORY:
+# HISTORY: Revision 1.100  2004/11/12 00:10:57  apsop
+# HISTORY: Increment patch version number.
+# HISTORY:
+# HISTORY: Revision 1.99  2004/11/11 22:32:43  apsop
+# HISTORY: Add in bat_rmfparms file and update bat_teldef file.
+# HISTORY:
+# HISTORY: Revision 1.98  2004/11/10 18:19:21  apsop
+# HISTORY: Use swift build 10 beta. Update xrt teldef file. Use "right" version of uvot_flat file. Update version of uvot2fits.
+# HISTORY:
+# HISTORY: Revision 1.97  2004/11/03 20:41:47  apsop
+# HISTORY: VERSION 1.0.0 !
+# HISTORY:
+# HISTORY: Revision 1.95  2004/10/31 21:20:13  apsop
+# HISTORY: Update alignment and uvot teldef files.  Put in fixed version of uvot_flat file.
+# HISTORY:
+# HISTORY: Revision 1.94  2004/10/29 20:47:47  apsop
+# HISTORY: Update uvot calibration files.
+# HISTORY:
+# HISTORY:
+# HISTORY: Revision 1.87  2004/10/13 02:32:30  apsop
+# HISTORY: Updated versions of ftools, headas, xrt2fits and bat2fits. Updated calibration files. Add lheasoft into libpath.
+# HISTORY:
+# HISTORY: Revision 1.81  2004/09/02 00:14:13  apsop
+# HISTORY: Patched version of xrt2fits.
+# HISTORY:
+# HISTORY: Revision 1.79  2004/08/31 19:20:33  apsop
+# HISTORY: All instruments and s/c with x-oriented teldefs
+# HISTORY:
+# HISTORY: Revision 1.76  2004/08/30 13:32:59  apsop
+# HISTORY: Update xrt2fits and xrt cal files.  Use headas 9beta.
+# HISTORY:
+# HISTORY: Revision 1.75  2004/08/27 18:24:45  apsop
+# HISTORY: Added a number of calibration files for generating XRT and UVOT level 2
+# HISTORY: and 3 products.
+# HISTORY:
+# HISTORY: Revision 1.74  2004/08/22 19:12:28  apsop
+# HISTORY: New version of bat2fits
+# HISTORY:
+# HISTORY: Revision 1.72  2004/08/18 00:42:42  apsop
+# HISTORY: New uvot2fits version and increment version number
+# HISTORY:
+# HISTORY: Revision 1.70  2004/08/13 17:28:53  apsop
+# HISTORY: New versions of bat2fits and uvot2fits
+# HISTORY:
+# HISTORY: Revision 1.66  2004/07/19 15:57:56  apsop
+# HISTORY: Update bat2fits and uvot2fits.
+# HISTORY:
+# HISTORY: Revision 1.64  2004/06/29 17:54:04  apsop
+# HISTORY: Fix screwed up comment line
+# HISTORY:
+# HISTORY: Revision 1.63  2004/06/29 14:41:38  apsop
+# HISTORY: Update calibration files and add a few more.
+# HISTORY:
+# HISTORY: Revision 1.59  2004/06/11 13:29:03  apsop
+# HISTORY: New versions of swift2fits, headas, ftools, acs2fits and fitspackets
+# HISTORY:
+# HISTORY: Revision 1.58  2004/06/03 13:10:37  apsop
+# HISTORY: Change alignment teldef file to unit matrix with -1 ROLLSIGN
+# HISTORY:
+# HISTORY: Revision 1.57  2004/06/02 16:36:15  apsop
+# HISTORY: New versions of headas and uvot2fits
+# HISTORY:
+# HISTORY: Revision 1.56  2004/05/26 23:34:50  apsop
+# HISTORY: More fiddling with the XRT range cal files
+# HISTORY:
+# HISTORY: Revision 1.54  2004/05/11 12:58:22  apsop
+# HISTORY: Use patched versions of swift2fits with correct MJDREF; update version number
+# HISTORY:
+# HISTORY: Revision 1.52  2004/04/19 13:55:53  dah
+# HISTORY: Update uvot2fits version
+# HISTORY:
+# HISTORY:
+# VERSION: 0.0
+#
+###############################################################################
+#
+version,s,h,"3.16.01",,,"Processing version number"
+#
+stools,s,h,"/aps/tools/stools/stools.4.7_big_heasoft6.13/bin",,,"version of STOOLS"
+ftools,s,h,"/aps/tools/headas/heasoft-6.13/i686-pc-linux-gnu-libc2.5",,,"FTOOLS version"
+headas,s,h,"/aps/tools/headas/heasoft-6.13/i686-pc-linux-gnu-libc2.5",,,"HEAdas version"
+#
+checksum_tool,s,h,"/aps/bin/sum",,,"Checksum generator tool"
+refdate,s,h,"2001-01-01",,,"Mission time reference date"
+reftime,s,h,"00:00:00",,,"Mission time reference time"
+origin,s,h,"GSFC",,,"Location processing being done"
+display,s,h,":0.0",,,"Xserver display"
+#
+# BAT shared files: Use procshare for production or testshare for testing
+#   install_test script edits procshare to testshare when installing in st area
+repository,s,h,"/aps/procshare",,,"BAT shared files directory"
+#
+lib_path,s,h,"/aps/tools/headas/heasoft-6.13/i686-pc-linux-gnu-libc2.5/lib:/aps/tools/gcc/gcc-3.4.3/lib",,,"library path used in processing script"
+#
+#starcatalog,s,h,"/local/procdata/usnob1/usnob1.b18,/local/procdata/usnob1/usnob1.alt",,,"Location of star catalogue files"
+#starcatalog,s,h,"/ssdc/usnob1/usnob1.b18,/ssdc/usnob1/usnob1.alt",,,"Location of star catalogue files"
+#starcatalog,s,h,"/data/sdc/home/apsop/catalogs/usnob1.b18_ssdc,/data/sdc/home/apsop/catalogs/usnob1.alt_ssdc",,,"Location of star catalogue files"
+#starcatalog,s,h,"/data/sdc/home/apsop/catalogs/usnob1.b26_ssdc,/data/sdc/home/apsop/catalogs/usnob1.alt_ssdc",,,"Location of star catalogue files"
+starcatalog,s,h,"/data/sdc/home/apsop/catalogs/usnob1.b26_ssdc,/data/sdc/home/apsop/catalogs/usnob1.b18_ssdc",,,"Location of star catalogue files"
+#
+#####################
+# CALDB path
+#####################
+#caldb,s,h,"/aps/calibration/caldb20090519",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20091210",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20100331",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20100812",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20100930",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110114",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110303",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110430",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110430clock073",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110430clock075",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110812",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110812clock077",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110812clock079",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110812clock081",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110812clock083",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110812clock085",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110812clock087",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110812clock088",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110812clock090",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110812swusens003clock090/",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110812clock091/",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20110812clock092/",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20130405/",,,"CALDB root directory"
+#caldb,s,h,"/aps/calibration/caldb20130405clock094/",,,"CALDB root directory"
+caldb,s,h,"/aps/calibration/caldb20130405clock096/",,,"CALDB root directory"
+#
+#####################
+# calibration files
+#####################
+#
+caldir,s,h,"/aps/calibration/swift",,,"Directory containing calibration files"
+leapsec,s,h,"leapsec_010712.fits",,,"Table of leapseconds"
+rigidity,s,h,"rigidity.data.1.23",,,"Earths magnetic rigidity file"
+#
+alignment,s,h,"swalign20041115v012.fits",,,"Cal file automatically obtained from CALDB"
+#
+#
+######################
+# software versions
+######################
+uvot2fits,s,h,"/aps/tools/swift2fits/uvot2fits/uvot2fits_3.32_heasoft6.13",,,"uvot2fits ver"
+xrt2fits,s,h,"/aps/tools/swift2fits/xrt2fits/xrt2fits_6.3_heasoft6.13",,,"xrt2fits ver"
+bat2fits,s,h,"/aps/tools/swift2fits/bat2fits/bat2fits6_7.15_heasoft6.13",,,"bat2fits ver"
+acs2fits,s,h,"/aps/tools/acs2fits/acs2fits2.1_heasoft6.13",,,"acs2fits ver"
+fitspackets,s,h,"/aps/tools/fitspackets/fitspackets1.7_heasoft6.13",,,"HK fits tool ver"
+packets_config,s,h,"/aps/tools/fitspackets/config.2007-03-27",,,"HK fits tool ver"
+#
+######################
+# parameters
+######################
+seed,s,h,-1965,,,"random number seed for coordinate conversions"
+meanperlcbin,i,h,50,,,"Mean counts per lightcurve bin"
+max_duration,r,h,864000,,,"Maximum reasonable tstop - tstart in seconds"
+max_bat_spectra,i,h,200,,,"Maximum BAT spectra which will be plotted"
+att_loss_thresh,r,h,1.0e-9,0.,,"Attitude loss function threshold"
+refattopt,s,h,"ANGLE_d=5,OFFSET_s=1000",,,"Reference attitude options"
+#
+######################
+# Who to alert
+# Uncomment appropriate lists for production or dev/test
+######################
+watchers,s,h,"jeff.guerber@nasa.gov dean.a.hinshaw@nasa.gov frank.marshall@nasa.gov",,,"who must be alerted for issues"
+# watchers,s,h,"jeff.guerber@nasa.gov",,,"who must be alerted for issues"
+#
+watchers_JDcat,s,h,"jeff.guerber@nasa.gov jd.myers@nasa.gov",,,"alert for issues with values in JDs GRB catalog"
+# watchers_JDcat,s,h,"jeff.guerber@nasa.gov",,,"alert for issues with values in JDs GRB catalog"
+#
+######################
+# Misc
+######################
+alerTime,r,h,3.0,,,"Age of data (in days) before alerting if GRB info is not found"
+#
+GrbCat,s,h,"/aps/db/grb_coord/swiftgrb.tdat",,,"Lorella's GRB catalog"
+LGrbCat,s,h,"/data/sdc/local/data/sdc4/apsop/Processman/PMT/etc/grb_catalog.tdat",,,"Local SWIFT GRB catalog"
+#
+# grb_lookupLC*.php are currently found in heasarcdev:/usr/local/web_chroot.prod/www/htdocs/docs/swift/archive/grb_table/
+JDCatCoords,s,h,"http://swift.gsfc.nasa.gov/archive/grb_table/grb_lookupLC.php",,,"JD's GRB catalog for coordinates"
+JDCatTrigs,s,h,"http://swift.gsfc.nasa.gov/archive/grb_table/grb_lookupLC3.php",,,"JD's GRB catalog for trigger times"
+#
+sexfile,s,h,"/aps/calibration/sextractor/field2.sex",,,"Sextractor file used by uvotdetect"
+#
+#targetsSkipFC,s,h,"00176453 00208654 00458448",,,"Targets that UvotProduct forces to Skip Finder Charts"
+targetsSkipFC,s,h,"",,,"Targets that UvotProduct forces to Skip Finder Charts"
