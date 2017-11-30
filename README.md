@@ -4,7 +4,7 @@ SN 2011fe is provided in the 'example' directory.
 
 
 
-##CONTENTS:
+## CONTENTS:
   software/interpolate_function.pro
       A function used to interpolate a spectrum on to the wavelength scale of
       another spectrum.
@@ -53,7 +53,7 @@ SN 2011fe is provided in the 'example' directory.
       of the IDL programs in the software/ directory.
 
 
-##INSTALLATION:
+## INSTALLATION:
   1. You should have working installations of UVOTPY and IDL before beginning.
   2. Download the TRUVOT software to a directory of your liking.
   3. Set your IDL path to recognize the programs in the software directory of 
@@ -62,7 +62,7 @@ SN 2011fe is provided in the 'example' directory.
            setenv IDL_PATH \+$IDL_DIR/lib:\+$IDL_DIR/user_contrib:\+/Users/username/truvot/software
 
 
-##PROCEDURE:
+## PROCEDURE:
   The easiest way to learn the process is to follow along line-by-line in the 3
   scripts.  The scripts must be executed in the order shown below because the output of
   each script is used in the subsequent script.  'Human-speak' explanations of the calling
@@ -85,14 +85,14 @@ SN 2011fe is provided in the 'example' directory.
      truvot/example/example_final_spectrum.dat).  If your output agrees
      with the reference case then you are good to go.
 
-##VERSION:
+## VERSION:
 Created by Mike Smitka, August 24, 2015.
 
-##LICENSE
+## LICENSE
 Please see the LICENSE file for details concerning the modification, 
 distribution and citation of this software. 
 
-##CONTACT:
+## CONTACT:
 mikesmitka@gmail.com
   I would like to know about your experience using the TRUVOT software.  I
   am happy to be of assistance to ensure a successful implementation.
