@@ -406,8 +406,8 @@ for p=0,n_elements(lambda1)-1 do begin
 endfor
 
 ;SUM ALL OF THE COMPONENTS FOR EACH FLUX POINT
-flu=sum(flustat,0)
-err=sum(errstat,0)
+flu=TOTAL(flustat,1)
+err=TOTAL(errstat,1)
 
 ;CALCULATE THE FINAL MOST LIKELY FLUX FOR EACH LAMBDA AND ERROR
 finalflux=flu/err
